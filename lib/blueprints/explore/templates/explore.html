@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {%if title %}
+    <title>{{title}}</title>
+    {%else%}
+    <title>Explore</title>
+    {%endif%}
+</head>
+
+<body>
+    <h1>The Explore Page</h1>
+    {%if books%}
+    <div class="container">
+        {%for book in books%}
+        <p>
+            <h1>{{book.title}} - {{book.author.name}}</h1>
+            <h2>{{book.info}} </h2>
+            <h5>{{book.language}}</h5>
+
+        </p>
+        {%endfor%}
+    </div>
+    {%endif%}
+</body>
+
+</html>
